@@ -1,0 +1,34 @@
+df -h | awk '{print $1 $4}'
+du -h | grep [0-9]G | sort -sh
+lsblck
+mount/unmount 
+dd
+vi/touch/mkdir
+cp/rm/mv
+less/tail -f/cat
+pwd 
+
+netstat -in / netstat -lptnu
+ifconfig/ip a
+ping/telnet/ssh/scp
+nc -z -v [ip] 1-80 | grep open 
+
+screen -ls 
+screen -r
+
+top/htop/uptime
+chmod/chown 
+
+ps aux | grep -w Z
+kill -HUP $(ps -A -ostat,ppid | awk '{/[zZ]/{ print $2 }')
+systemctl status | grep 'ERROR' / systemctl restart .service
+
+=========================hdfs==============================
+
+hdfs dfs -chmod/chown
+hdfs dfs -cp
+hdfs dfs -rm -R -skipTrash .../* 
+hdfs dfs -du 
+hdfs dfs -get/put
+hdfs dfs -mkdir
+hdfs dfs -mv
