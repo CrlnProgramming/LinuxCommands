@@ -1,3 +1,4 @@
+du -xhdl /
 df -h | awk '{print $1 $4}'
 du -h | grep [0-9]G | sort -sh
 lsblck
@@ -10,7 +11,7 @@ pwd
 
 netstat -in / netstat -lptnu
 ifconfig/ip a
-ping/telnet/ssh/scp
+ping/telnet/ssh/scp/curl
 nc -z -v [ip] 1-80 | grep open 
 
 screen -ls 
@@ -32,3 +33,13 @@ hdfs dfs -du
 hdfs dfs -get/put
 hdfs dfs -mkdir
 hdfs dfs -mv
+hadoop fs -df -h /
+hadoop dfs -du -h / 
+hdfs dfsadmin -setSpaceQuota 5 …/
+Yarn application -kill
+
+========================ipa================================
+
+Ipa user-find “userIP”
+ipa host-find 
+Ipa host-show 
