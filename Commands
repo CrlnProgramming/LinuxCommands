@@ -38,6 +38,17 @@ hadoop dfs -du -h /
 hdfs dfsadmin -setSpaceQuota 5 …/
 Yarn application -kill
 
+========================docker=============================
+
+docker ps
+docker build -t "name" .
+docker images
+docker rm "container_id"
+docker run -d -p port:port "container_id"
+docker start/stop "container_id/ etc ids"
+docker ps -a
+docker logs -f "container_id"
+
 ========================ipa================================
 
 Ipa user-find “userIP”
