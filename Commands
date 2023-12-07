@@ -49,7 +49,8 @@ docker run -d -p port:port "container_id"
 docker start/stop "container_id/ etc ids"
 docker ps -a
 docker logs -f "container_id"
-
+docker inspect --format='{{json .NetworkSettings.Networks}}' my-container
+docker network ls
 ========================ipa================================
 
 Ipa user-find “userIP”
