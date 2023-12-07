@@ -43,6 +43,7 @@ Yarn application -kill
 docker ps
 docker build -t "name" .
 docker images
+docker rm iamge "name:tag"
 docker rm "container_id"
 docker run -d -p port:port "container_id"
 docker start/stop "container_id/ etc ids"
