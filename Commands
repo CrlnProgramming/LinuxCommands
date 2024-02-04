@@ -51,6 +51,11 @@ docker ps -a
 docker logs -f "container_id"
 docker inspect --format='{{json .NetworkSettings.Networks}}' my-container
 docker network ls
+
+docker-compose logs -f
+docker-compose up -d
+docker-compose ps -a
+docker-compose down
 ========================ipa================================
 
 Ipa user-find “userIP”
