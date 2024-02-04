@@ -8,7 +8,7 @@ vi/touch/mkdir
 cp/rm/mv
 less/tail -f/cat
 pwd 
-
+sudo dpkg -l *packedge_name*
 netstat -in / netstat -lptnu
 ifconfig/ip a
 ping/telnet/ssh/scp/curl
