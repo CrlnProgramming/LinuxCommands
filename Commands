@@ -2,9 +2,12 @@ du -xhdl /
 df -h | awk '{print $1 $4}'
 du -h | grep [0-9]G | sort -sh
 lsblck
-mount/unmount 
+mount/unmount
+findmnt --real
+lsof
 dd
 vi/touch/mkdir
+tar -czvf archive.tar.gz file1 file2 directory1
 cp/rm/mv
 less/tail -f/cat
 pwd 
