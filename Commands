@@ -4,6 +4,7 @@ du -h | grep [0-9]G | sort -sh
 lsblck
 mount/unmount
 findmnt --real
+blkid
 lsof
 dd
 vi/touch/mkdir
