@@ -16,6 +16,7 @@ cp/rm/mv
 less/tail -f/tail -1000/cat
 pwd 
 sudo dpkg -l *packedge_name*
+find ~/. -name "name"
 for i in cat ${} do; 
 =========================net==============================
 netstat -in / netstat -lptnu
@@ -36,6 +37,10 @@ systemctl status | grep 'ERROR' / systemctl restart .service
 (ACL)
 getfacl
 chmod/chown
+=========================ansible============================
+ad hoks
+ansible hosts -m ping -a | grep pong
+ansible hosts -a "/sbin/reboot"
 =========================hdfs==============================
 hdfs dfs -chmod/chown
 hdfs dfs -cp
