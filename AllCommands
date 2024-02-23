@@ -5,10 +5,11 @@ du -h | grep [0-9]G | sort -sh
 lsblck
 mount/unmount
 findmnt --real
+fdisk -l
 blkid
 lsof
 dd
-=========================disk==============================
+=========================another==============================
 vi/touch/mkdir
 tar -czvf archive.tar.gz file1 file2 directory1
 cp/rm/mv
