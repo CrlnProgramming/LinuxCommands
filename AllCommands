@@ -1,3 +1,4 @@
+=========================disk==============================
 du -xhdl /
 df -h | awk '{print $1 $4}'
 du -h | grep [0-9]G | sort -sh
@@ -7,29 +8,34 @@ findmnt --real
 blkid
 lsof
 dd
+=========================disk==============================
 vi/touch/mkdir
 tar -czvf archive.tar.gz file1 file2 directory1
 cp/rm/mv
-less/tail -f/cat
+less/tail -f/tail -1000/cat
 pwd 
 sudo dpkg -l *packedge_name*
+for i in cat ${} do; 
+=========================net==============================
 netstat -in / netstat -lptnu
 ifconfig/ip a
 ping/telnet/ssh/scp/curl
-nc -z -v [ip] 1-80 | grep open 
-
+nc -z -v [ip] 1-80 | grep open
+nmap
+=========================multiplex==============================
 screen -ls 
 screen -r
-
+tmux
+=========================subprocess============================
 top/htop/uptime
-chmod/chown 
-
 ps aux | grep -w Z
 kill -HUP $(ps -A -ostat,ppid | awk '{/[zZ]/{ print $2 }')
+kill -9
 systemctl status | grep 'ERROR' / systemctl restart .service
-
+(ACL)
+getfacl
+chmod/chown
 =========================hdfs==============================
-
 hdfs dfs -chmod/chown
 hdfs dfs -cp
 hdfs dfs -rm -R -skipTrash .../* 
@@ -41,9 +47,8 @@ hadoop fs -df -h /
 hadoop dfs -du -h / 
 hdfs dfsadmin -setSpaceQuota 5 …/
 Yarn application -kill
-
+start/stop/restart ambari
 ========================docker=============================
-
 docker ps
 docker build -t "name" .
 docker images
@@ -61,7 +66,7 @@ docker-compose up -d
 docker-compose ps -a
 docker-compose down
 ========================ipa================================
-
 Ipa user-find “userIP”
 ipa host-find 
 Ipa host-show 
+=========================k8s==============================
