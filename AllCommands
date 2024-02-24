@@ -19,6 +19,7 @@ sudo dpkg -l *packedge_name*
 find ~/. -name "name"
 for i in cat ${} do; 
 =========================net==============================
+lshw
 netstat -in / netstat -lptnu
 ifconfig/ip a
 ping/telnet/ssh/scp/curl
