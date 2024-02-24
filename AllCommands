@@ -19,12 +19,23 @@ sudo dpkg -l *packedge_name*
 find ~/. -name "name"
 for i in cat ${} do; 
 =========================net==============================
+ip a
+netplan-for hardcoding wifi-conf
 lshw
 netstat -in / netstat -lptnu
-ifconfig/ip a
+ifconfig
 ping/telnet/ssh/scp/curl
 nc -z -v [ip] 1-80 | grep open
 nmap
+nmcli - cheack all hosts on lan
+nmtui - UI config
+iwconfig
+iwlist scanning
+
+dmesg | grep -i eth
+
+journalctl | grep wlan0
+journalctl | grep netplan
 =========================multiplex==============================
 screen -ls 
 screen -r
