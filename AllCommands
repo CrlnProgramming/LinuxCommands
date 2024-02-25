@@ -34,6 +34,7 @@ iwlist scanning
 arp-scan --interface="enterface" --localnet  -ARP scan
 dmesg | grep -i eth
 
+wakeonlan MAC-ID
 nslookup
 
 journalctl | grep wlan0
