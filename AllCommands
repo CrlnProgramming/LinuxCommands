@@ -34,6 +34,8 @@ iwlist scanning
 arp-scan --interface="enterface" --localnet  -ARP scan
 dmesg | grep -i eth
 
+nslookup
+
 journalctl | grep wlan0
 journalctl | grep netplan
 =========================multiplex==============================
