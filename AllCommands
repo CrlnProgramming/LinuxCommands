@@ -31,7 +31,7 @@ nmcli - cheack all hosts on lan
 nmtui - UI config
 iwconfig
 iwlist scanning
-
+arp-scan --interface="enterface" --localnet  -ARP scan
 dmesg | grep -i eth
 
 journalctl | grep wlan0
