@@ -13,6 +13,7 @@ dd
 vi/touch/mkdir
 tar -czvf archive.tar.gz file1 file2 directory1
 cp/rm/mv
+sudo sh -c 'echo ok && sudo -i'
 less/tail -f/tail -1000/cat
 pwd 
 sudo dpkg -l *packedge_name*
