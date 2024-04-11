@@ -40,6 +40,9 @@ nslookup
 
 journalctl | grep wlan0
 journalctl | grep netplan
+
+sudo iptables -L
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 =========================multiplex==============================
 screen -ls 
 screen -r
