@@ -1,3 +1,9 @@
+=========================user==============================
+less /etc/group
+/etc/passwd
+chgrp
+groupadd -r
+groupmod -g new_gid groupname
 =========================disk==============================
 du -xhdl /
 df -h | awk '{print $1 $4}'
