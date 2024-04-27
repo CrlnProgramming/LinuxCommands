@@ -1,9 +1,12 @@
-=========================user==============================
-less /etc/group
+=========================user|groups==============================
+users
+groups
+/etc/group
 /etc/passwd
-chgrp
+chgrp/chmod
 groupadd -r
 groupmod -g new_gid groupname
+setfacl -m u:username:rw- /path/to/file.txt
 =========================disk==============================
 du -xhdl /
 df -h | awk '{print $1 $4}'
