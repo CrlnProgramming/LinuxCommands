@@ -102,11 +102,11 @@ docker-compose down
 ========================ipa================================
 Ipa user-find “userIP”
 ipa host-find 
-
+Ipa host-show 
 ======================kuber================================
 
 ======================git=================================
 ssh -T git@github.com
-
-Ipa host-show 
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/
 =========================k8s==============================
