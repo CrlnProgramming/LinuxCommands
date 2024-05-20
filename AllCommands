@@ -1,5 +1,8 @@
 =========================user|groups==============================
 users
+useradd -m newusername
+passwd newusername
+usermod -aG sudo newusername
 groups
 /etc/group
 /etc/passwd
