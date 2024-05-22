@@ -89,6 +89,7 @@ start/stop/restart ambari
 docker ps
 docker build -t "name" .
 docker images
+docker rmi <id>
 docker rm iamge "name:tag"
 docker rm "container_id"
 docker run -d -p port:port "container_id"
@@ -97,6 +98,7 @@ docker ps -a
 docker logs -f "container_id"
 docker inspect --format='{{json .NetworkSettings.Networks}}' my-container
 docker network ls
+docker exec -it <id> sh 
 
 docker-compose logs -f
 docker-compose up -d
