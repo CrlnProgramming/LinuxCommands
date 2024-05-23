@@ -72,6 +72,7 @@ chmod/chown
 ad hoks
 ansible hosts -m ping -a | grep pong
 ansible hosts -a "/sbin/reboot"
+ansible hosts -m shell -a “rm ‘var/log...’” -i hosts
 =========================hdfs==============================
 hdfs dfs -chmod/chown
 hdfs dfs -cp
