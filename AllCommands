@@ -100,6 +100,7 @@ docker logs -f "container_id"
 docker inspect --format='{{json .NetworkSettings.Networks}}' my-container
 docker network ls
 docker exec -it <id> sh 
+docker system prune -a
 
 docker-compose logs -f
 docker-compose up -d
