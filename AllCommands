@@ -95,13 +95,20 @@ docker rm iamge "name:tag"
 docker rm "container_id"
 docker run -d -p port:port "container_id"
 docker start/stop "container_id/ etc ids"
+docker stats
 docker ps -a
 docker logs -f "container_id"
 docker inspect --format='{{json .NetworkSettings.Networks}}' my-container
 docker network ls
 docker exec -it <id> sh 
 docker system prune -a
-
+---
+docker system prune -a -f && 
+docker container prune -f && 
+docker volume prune -a -f && 
+docker builder prune -a -f && 
+---
+docker image prune -a -f
 docker-compose logs -f
 docker-compose up -d
 docker-compose ps -a
