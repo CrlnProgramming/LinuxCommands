@@ -53,8 +53,11 @@ nslookup
 journalctl | grep wlan0
 journalctl | grep netplan
 
-sudo iptables -L
-sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+ufw allow 80/tcp
+iptables -L
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo apt-get install iptables-persistent
+sudo netfilter-persistent save
 =========================multiplex==============================
 screen -ls 
 screen -r
