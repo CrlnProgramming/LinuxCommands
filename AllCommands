@@ -120,8 +120,12 @@ docker-compose down
 Ipa user-find “userIP”
 ipa host-find 
 Ipa host-show 
-======================kuber================================
-
+======================gitlab================================
+gitlab-runner start/stop
+----------------------update-runners------------------------
+curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash && 
+apt-get update && 
+apt-get install gitlab-runner
 ======================git=================================
 ssh -T git@github.com
 eval "$(ssh-agent -s)"
