@@ -21,6 +21,7 @@ fdisk -l
 blkid
 lsof
 dd
+dd if=/dev/sdX of=/path/to/snapshot.img bs=4M
 =========================another==============================
 vi/touch/mkdir
 tar -czvf archive.tar.gz file1 file2 directory1
