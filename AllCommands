@@ -131,4 +131,6 @@ ssh -T git@github.com
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/
 ssh-keygen -t rsa -b 4096 -C "mail" -f ~/.ssh/id_rsa_key_name_file
-=========================k8s==============================
+=========================certbot=============================
+certbot certonly --webroot -w /var/www/html --force-renewal --email addres_mail -d web-server-domain --agree-tos
+certbot certonly --force-renewal
