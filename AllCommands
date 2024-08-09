@@ -32,6 +32,10 @@ pwd
 sudo dpkg -l *packedge_name*
 find ~/. -name "name"
 for i in cat ${} do; 
+zip archive.zip file.txt
+zip -r archive.zip directory/
+zip -r -q archive.zip directory/
+unzip archive.zip
 =========================net==============================
 ip a
 netplan-for hardcoding wifi-conf
