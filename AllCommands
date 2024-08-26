@@ -76,6 +76,7 @@ systemctl status | grep 'ERROR' / systemctl restart .service
 (ACL)
 getfacl
 chmod/chown
+rm $(which docker-compose)
 =========================ansible============================
 ad hoks
 ansible hosts -m ping -a | grep pong
