@@ -111,6 +111,7 @@ docker inspect --format='{{json .NetworkSettings.Networks}}' my-container
 docker network ls
 docker exec -it <id> sh 
 docker system prune -a
+docker stop $(docker ps -q -a)
 ---
 docker system prune -a -f && 
 docker container prune -f && 
