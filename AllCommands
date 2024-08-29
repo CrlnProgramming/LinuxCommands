@@ -59,6 +59,7 @@ journalctl | grep wlan0
 journalctl | grep netplan
 
 ufw allow 80/tcp
+ufw delete number_id
 iptables -L
 iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 sudo apt-get install iptables-persistent
