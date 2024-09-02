@@ -135,6 +135,9 @@ curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/sc
 apt-get update && 
 apt-get install gitlab-runner
 ======================git=================================
+git stash
+git rebase -i origin/"name branch"
+
 ssh -T git@github.com
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/
