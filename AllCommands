@@ -124,6 +124,7 @@ docker-compose logs -f
 docker-compose up -d
 docker-compose ps -a
 docker-compose down
+docker-compose --file docker-compose.yml --env-file /path/to/.env up
 ========================ipa================================
 Ipa user-find “userIP”
 ipa host-find 
