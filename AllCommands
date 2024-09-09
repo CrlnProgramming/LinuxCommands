@@ -11,6 +11,7 @@ groupadd -r
 groupmod -g new_gid groupname
 setfacl -m u:username:rw- /path/to/file.txt
 =========================disk==============================
+iostat
 du -xhdl /
 df -h | awk '{print $1 $4}'
 du -h | grep [0-9]G | sort -sh
