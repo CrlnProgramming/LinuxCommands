@@ -1,0 +1,7 @@
+SELECT datname, usename, state, query, xact_start, query_start
+FROM pg_stat_activity
+WHERE state = 'active';
+
+ROLLBACK;
+
+SELECT pg_is_in_transaction(), txid_current();
