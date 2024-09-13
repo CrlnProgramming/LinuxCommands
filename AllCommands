@@ -1,3 +1,6 @@
+shell 
+chsh -s /usr/bin/fish
+export fish
 =========================user|groups==============================
 users
 useradd -m newusername
