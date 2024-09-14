@@ -51,6 +51,8 @@ ifconfig
 ping/telnet/ssh/scp/curl
 nc -z -v [ip] 1-80 | grep open
 nmap
+ss -tuln | grep "pornID"
+netstat -tuln | grep "pornID"
 nmcli - cheack all hosts on lan
 nmtui - UI config
 iwconfig
