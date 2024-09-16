@@ -1,0 +1,4 @@
+1.'e'
+2. past volumer write this -> 'rw init=/bin/bash'
+3. passwd root
+4. reboot by power
