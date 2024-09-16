@@ -48,8 +48,13 @@ netplan-for hardcoding wifi-conf
 lshw
 netstat -in / netstat -lptnu
 ifconfig
-ping/telnet/ssh/scp/curl
+
+ping/telnet/ssh/scp/curl/
+
+sftp -oPort=portID user@host
+ftp user@host
 nc -z -v [ip] 1-80 | grep open
+
 nmap
 ss -tuln | grep "pornID"
 netstat -tuln | grep "pornID"
