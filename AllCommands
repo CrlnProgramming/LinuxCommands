@@ -130,6 +130,9 @@ docker exec -it <id> sh
 docker system prune -a
 docker stop $(docker ps -q -a)
 ---
+docker build --no-cache -t "nameservice" .
+docker run -it --entrypoint /bin/sh
+---
 docker system prune -a -f && 
 docker container prune -f && 
 docker volume prune -a -f && 
