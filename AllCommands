@@ -125,6 +125,7 @@ docker stats
 docker ps -a
 docker logs -f "container_id"
 docker inspect --format='{{json .NetworkSettings.Networks}}' my-container
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-container/containerID
 docker network ls
 docker exec -it <id> sh 
 docker system prune -a
