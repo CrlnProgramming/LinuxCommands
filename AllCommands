@@ -124,8 +124,13 @@ docker start/stop "container_id/ etc ids"
 docker stats
 docker ps -a
 docker logs -f "container_id"
+
 docker inspect --format='{{json .NetworkSettings.Networks}}' my-container
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-container/containerID
+
+docker run --link anothercontainer:name
+docker run --dns ip-container
+
 docker network ls
 docker exec -it <id> sh 
 docker system prune -a
