@@ -50,6 +50,7 @@ netstat -in / netstat -lptnu
 ifconfig
 
 ping/telnet/ssh/scp/curl/
+traceroute
 
 sftp -oPort=portID user@host
 ftp user@host
