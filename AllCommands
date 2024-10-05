@@ -117,6 +117,7 @@ start/stop/restart ambari
 docker ps
 docker build -t "name" .
 docker images
+docker system df
 docker rmi <id>
 docker rm iamge "name:tag"
 docker rm "container_id"
