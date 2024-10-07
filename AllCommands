@@ -86,7 +86,8 @@ screen -ls
 screen -r
 tmux
 =========================subprocess============================
-top/htop/uptime/radeontop
+top/htop/uptime/radeontop/sensors
+
 ps aux | grep -w Z
 kill -HUP $(ps -A -ostat,ppid | awk '{/[zZ]/{ print $2 }')
 kill -9
