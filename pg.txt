@@ -5,3 +5,5 @@ WHERE state = 'active';
 ROLLBACK;
 
 SELECT pg_is_in_transaction(), txid_current();
+
+SELECT rolname FROM pg_roles;
