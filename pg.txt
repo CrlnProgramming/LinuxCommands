@@ -7,3 +7,5 @@ ROLLBACK;
 SELECT pg_is_in_transaction(), txid_current();
 
 SELECT rolname FROM pg_roles;
+
+CREATE ROLE readonly_user WITH LOGIN PASSWORD 'your_password';
