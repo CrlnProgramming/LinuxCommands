@@ -1,0 +1,8 @@
+git rebase -i origin/branch
+git stash
+git rm
+git clean -fd
+git revert HEAD
+git reset --hard HEAD~1
+git reset --soft HEAD~1
+git push -f
