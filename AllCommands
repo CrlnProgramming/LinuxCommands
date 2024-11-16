@@ -74,6 +74,9 @@ nslookup
 
 journalctl | grep wlan0
 journalctl | grep netplan
+--------------------------link---------------------------------
+ip link
+ip link delete 
 ---------------------------ufw----------------------------------
 ufw allow 80/tcp
 ufw delete number_id
