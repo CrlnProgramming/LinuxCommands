@@ -173,7 +173,7 @@ apt-get install gitlab-runner
 git stash
 git rebase -i origin/"name branch"
 git config --global --add safe.directory /path/directory/
-
+======================ssh-keys================================
 ssh -T git@github.com
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/
