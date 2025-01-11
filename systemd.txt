@@ -1,0 +1,6 @@
+systemctl status --failed
+systecmtl status
+systemctl reset-failed "N".service --> remove failed services list
+systemctl mask "N".service --> symlinc in /dev/null
+systemctl disable "N".service
+systecmtl stop/start/restart "N".service
