@@ -1,0 +1,4 @@
+dotnet --list-runtimes
+dotnet --info 
+dotnet run --project <path>
+dotnet run
