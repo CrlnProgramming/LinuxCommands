@@ -60,6 +60,8 @@ ftp user@host
 nc -z -v [ip] 1-80 | grep open
 
 nmap
+nmap --open 192.168.1.0/24 --scan in local net
+
 ss -tuln | grep "pornID"
 netstat -tuln | grep "pornID"
 nmcli - cheack all hosts on lan
