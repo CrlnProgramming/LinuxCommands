@@ -171,6 +171,16 @@ gitlab-runner start/stop
 curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash && 
 apt-get update && 
 apt-get install gitlab-runner
+gitlab-backup create 
+gitlab-ctl status
+gitlab-rake gitlab:env:info
+gitlab-rake gitlab:status
+gitlab-rake gitlab:check
+gitlab-ctl start
+gitlab-ctl status
+gitlab-ctl restart redis
+gitlab-ctl reconfigure
+
 ======================git=================================
 git stash
 git rebase -i origin/"name branch"
