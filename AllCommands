@@ -193,3 +193,4 @@ ssh-keygen -t rsa -b 4096 -C "mail" -f ~/.ssh/id_rsa_key_name_file
 =========================certbot=============================
 certbot certonly --webroot -w /var/www/html --force-renewal --email addres_mail -d web-server-domain --agree-tos
 certbot certonly --force-renewal
+certbot certonly --manual --preferred-challenges dns -d <dnsname>.ru -d *.<dnsname>.ru 
