@@ -1,0 +1,8 @@
+/etc/mysql/my.cnf
+
+bind-address = 0.0.0.0
+
+
+CREATE USER 'username'@'%' IDENTIFIED BY 'password'; 
+GRANT ALL PRIVILEGES ON database.* TO 'username'@'%'; 
+FLUSH PRIVILEGES;
