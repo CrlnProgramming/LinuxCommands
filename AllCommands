@@ -173,6 +173,7 @@ apt-get update &&
 apt-get install gitlab-runner
 gitlab-backup create 
 gitlab-ctl status
+
 gitlab-rake gitlab:env:info
 gitlab-rake gitlab:status
 gitlab-rake gitlab:check
@@ -180,6 +181,8 @@ gitlab-ctl start
 gitlab-ctl status
 gitlab-ctl restart redis
 gitlab-ctl reconfigure
+
+gitlab-rake gitlab:doctor:secrets
 
 ======================git=================================
 git stash
