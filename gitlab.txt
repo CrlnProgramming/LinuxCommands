@@ -1,0 +1,6 @@
+gitlab-psql
+
+UPDATE projects SET runners_token = null, runners_token_encrypted = null;
+UPDATE namespaces SET runners_token = null, runners_token_encrypted = null;
+UPDATE application_settings SET runners_registration_token_encrypted = null;
+UPDATE ci_runners SET token = null, token_encrypted = null;
