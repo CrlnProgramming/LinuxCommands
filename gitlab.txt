@@ -4,3 +4,14 @@ UPDATE projects SET runners_token = null, runners_token_encrypted = null;
 UPDATE namespaces SET runners_token = null, runners_token_encrypted = null;
 UPDATE application_settings SET runners_registration_token_encrypted = null;
 UPDATE ci_runners SET token = null, token_encrypted = null;
+
+
+---
+Gitlab::CurrentSettings.ci_job_token_signing_key
+
+If the output returns nil, you will need to generate a key manually. Run the following in the rails console to generate a new token signing key:
+
+settings = Gitlab::CurrentSettings.current_application_settings
+settings.ci_job_token_signing_key = OpenSSL::PKey::RSA.new(2048).to_pem
+settings.save
+
