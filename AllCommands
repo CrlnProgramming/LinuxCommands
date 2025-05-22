@@ -184,6 +184,9 @@ gitlab-ctl reconfigure
 
 gitlab-rake gitlab:doctor:secrets
 
+gitlab-rails runner "puts Gitlab::Application.secrets.secret_key_base"
+gitlab-rake gitlab:check SANITIZE=true
+
 ======================git=================================
 git stash
 git rebase -i origin/"name branch"
