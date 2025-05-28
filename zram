@@ -1,0 +1,13 @@
+apt update && apt install zram-generator
+
+/etc/systemd/zram-generator.conf
+
+[zram0]
+zram-size = ram
+zram-size = 4096M
+compression-algorithm = zstd
+swap-priority = 100
+fs-type = swap
+
+systemctl daemon-reload
+systemctl start /dev/zram0
