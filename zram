@@ -11,3 +11,16 @@ fs-type = swap
 
 systemctl daemon-reload
 systemctl start /dev/zram0
+
+
+---
+
+apt install zstd
+modprobe zram
+echo "zram" | tee -a /etc/modules
+bash -c 'echo "options zram num_devices=1" > /etc/modprobe.d/zram.conf'
+
+lsmod | grep zram
+echo "2G" | sudo tee /sys/block/zram0/disksize
+sudo mkswap /dev/zram0
+sudo swapon /dev/zram0 --priority 100
