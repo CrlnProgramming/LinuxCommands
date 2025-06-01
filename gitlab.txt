@@ -15,3 +15,4 @@ settings = Gitlab::CurrentSettings.current_application_settings
 settings.ci_job_token_signing_key = OpenSSL::PKey::RSA.new(2048).to_pem
 settings.save
 
+TRUNCATE integrations, chat_names, issue_tracker_data, jira_tracker_data, slack_integrations, web_hooks, zentao_tracker_data, web_hook_logs CASCADE;
