@@ -1,0 +1,19 @@
+gitlab-rails console
+----
+Deactivation 
+----
+inactive_days = 90  #90 days
+User.active.where("last_activity_on < ? OR last_activity_on IS NULL", inactive_days.days.ago).each do |user|
+  user.deactivate!
+  puts "Deactivated: #{user.username}"
+end
+
+----
+Delete
+----
+
+User.deactivated.find_each do |user|
+  user.destroy
+  puts "Полностью удалён: #{user.username}"
+end
+
