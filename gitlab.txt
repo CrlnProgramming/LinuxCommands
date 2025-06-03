@@ -7,6 +7,10 @@ UPDATE ci_runners SET token = null, token_encrypted = null;
 
 
 ---
+gitlab-rake gitlab:show:config | grep db_key_base
+new_key = OpenSSL::PKey::RSA.new(2048)
+ApplicationSetting.current.update!(ci_job_token_signing_key: new_key.to_s)
+
 gitlab-rails console
 Gitlab::CurrentSettings.ci_job_token_signing_key
 
