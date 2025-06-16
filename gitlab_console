@@ -17,3 +17,12 @@ User.deactivated.find_each do |user|
   puts "Полностью удалён: #{user.username}"
 end
 
+------
+IF U Have F#$n issue /admin/runners after migration
+
+Enter that:
+
+gitlab-rails console
+> ApplicationSetting.first.delete
+> ApplicationSetting.first
+
