@@ -195,11 +195,10 @@ sudo gitlab-rake db:migrate:status
 sudo gitlab-rake gitlab:background_migrations:execute
 
 grep db_key_base /etc/gitlab/gitlab-secrets.json
-sudo grep secret_key_base /etc/gitlab/gitlab-secrets.json
-sudo gitlab-rails runner "puts Gitlab::CurrentSettings.current_application_settings.health_check_access_token"
+grep secret_key_base /etc/gitlab/gitlab-secrets.json
+gitlab-rails runner "puts Gitlab::CurrentSettings.current_application_settings.health_check_access_token"
 
-
-sudo gitlab-rails runner "WebHook.where(url: 'https://botify.ibs-q.ru/Telegram').destroy_all"
+gitlab-rails runner "WebHook.where(url: 'https://###/###').destroy_all"
 ======================git=================================
 git stash
 git rebase -i origin/"name branch"
