@@ -26,3 +26,11 @@ gitlab-rails console
 > ApplicationSetting.first.delete
 > ApplicationSetting.first
 
+Status jobs
+----
+{
+  running: Ci::Build.running.count,
+  pending: Ci::Build.pending.count,
+  stuck: Ci::Build.where(status: [:running, :pending]).where("created_at < ?", 24.hours.ago).count
+}
+----
