@@ -34,3 +34,9 @@ Status jobs
   stuck: Ci::Build.where(status: [:running, :pending]).where("created_at < ?", 24.hours.ago).count
 }
 ----
+Status Runners
+----
+Ci::Runner.where("contacted_at < ?", 10.minutes.ago).each do |runner|
+  puts "Runner #{runner.id} (#{runner.description}) not responding since #{runner.contacted_at}"
+end
+----
