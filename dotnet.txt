@@ -2,3 +2,7 @@ dotnet --list-runtimes
 dotnet --info 
 dotnet run --project <path>
 dotnet run
+dotnet build
+dotnet publish 
+dotnet debug
+dotnet test
