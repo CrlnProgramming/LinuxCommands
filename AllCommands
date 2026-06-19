@@ -104,6 +104,7 @@ systemctl status | grep 'ERROR' / systemctl restart .service
 getfacl
 chmod/chown
 which / rm $(which 'name')
+timedatectl status
 =========================ansible============================
 ad hoks
 ansible hosts -m ping -a | grep pong
