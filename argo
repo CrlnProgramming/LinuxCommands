@@ -1,0 +1,2 @@
+argocd app sync <project> argo
+argocd login <fqdn>
