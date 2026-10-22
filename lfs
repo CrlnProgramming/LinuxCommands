@@ -1,0 +1,9 @@
+git lfs track "some-lourge-file"
+cat .gitattributes
+git add .gitattributes
+git add some-lourge-file
+git status
+
+git lfs ls-files
+git lfs status
+git lfs pull
