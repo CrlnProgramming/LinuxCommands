@@ -1,0 +1,11 @@
+fix stanged lags after not actions (500ms)
+---
+dont sleep fcng thinkpad touchpad and fedora
+
+/etc/udev/rules.d/99-touchpad-power.rules
+ACTION=="add", SUBSYSTEM=="i2c", KERNEL=="i2c-SYNA2BA6:00", ATTR{power/control}="on"
+ACTION=="add", SUBSYSTEM=="platform", KERNEL=="AMDI0010:00", ATTR{power/control}="on"
+
+echo on | sudo tee /sys/devices/platform/<touchpad>/power/control
+sudo udevadm control --reload-rules
+---
