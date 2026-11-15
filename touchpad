@@ -1,11 +1,26 @@
-fix stanged lags after not actions (500ms)
 ---
-dont sleep fcng thinkpad touchpad and fedora
+
+/etc/udev/rules.d/99-syna-cf00-ignore-mouse.rules
+# Synaptics SYNA2BA6 (06CB:CF00) exposes a relative "Mouse" node next to
+# the real touchpad. Both sit in one libinput group; the mouse reports
+# cause jump detection to discard motion (cursor stutter/lag).
+ACTION!="remove", SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="SYNA2BA6:00 06CB:CF00 Mouse", ENV{LIBINPUT_IGNORE_DEVICE}="1"
+
+/etc/libinput/local-overrides.quirks
+# ThinkBook 14 G6+ AHP (21LF): I2C-HID Synaptics SYNA2BA6 06CB:CF00
+# Kernel MSC_TIMESTAMP on this AMD DesignWare bus is unreliable and
+# libinput then treats normal motion as a 20mm "touch jump" and drops it.
+[Lenovo ThinkBook 14 G6+ AHP SYNA2BA6 Touchpad]
+MatchName=SYNA2BA6:00 06CB:CF00 Touchpad
+MatchBus=i2c
+MatchUdevType=touchpad
+MatchDMIModalias=dmi:*:svnLENOVO:pn21LF:*
+AttrMscTimestamp=watch
 
 /etc/udev/rules.d/99-touchpad-power.rules
 ACTION=="add", SUBSYSTEM=="i2c", KERNEL=="i2c-SYNA2BA6:00", ATTR{power/control}="on"
 ACTION=="add", SUBSYSTEM=="platform", KERNEL=="AMDI0010:00", ATTR{power/control}="on"
 
+---
 echo on | sudo tee /sys/devices/platform/<touchpad>/power/control
 sudo udevadm control --reload-rules
----
